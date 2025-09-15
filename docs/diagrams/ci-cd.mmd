@@ -1,0 +1,22 @@
+flowchart LR
+  Dev[Developers] --> PR[Git Pull Request]
+  PR --> CI[CI Pipeline]
+  CI --> UT[Unit and Lint Tests]
+  UT --> PKG[Build Artifacts]
+  PKG --> CT[Container Image]
+  CT --> STG[Deploy to Staging]
+  STG --> UAT[User Acceptance Testing]
+  UAT -->|Approval| CD[Promote to Production]
+  CD --> PROD[Deploy to Production]
+  PROD --> MON[Monitoring and Alerts]
+  PROD --> BKP[Automated Backups]
+
+  subgraph Security Gates
+    SAST[Static Analysis]
+    DAST[Dynamic Tests]
+    DEPCHK[Dependency Scans]
+  end
+
+  CI --> SAST
+  CT --> DEPCHK
+  STG --> DAST

@@ -1,0 +1,19 @@
+flowchart LR
+  Users[Users] --> Auth[Authentication]
+  Auth --> RBAC[RBAC]
+  RBAC --> App[Application Services]
+  App --> Audit[Audit Trail]
+  App --> Data[(MariaDB)]
+  App --> Cache[(Redis)]
+
+  TLS[[SSL over TLS]]:::sec
+  Users --- TLS --- Auth
+
+  Backups[(Encrypted Backups AES-256)]:::sec
+  Data --> Backups
+
+  SIEM[Monitoring and Alerts]:::sec
+  App -. logs .-> SIEM
+  Auth -. events .-> SIEM
+
+  classDef sec fill:#eef2ff,stroke:#6366f1,color:#111827;

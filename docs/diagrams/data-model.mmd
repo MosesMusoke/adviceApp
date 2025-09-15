@@ -1,0 +1,107 @@
+erDiagram
+  ACCOUNT ||--o{ GL_ENTRY : posts
+  CUSTOMER ||--o{ SALES_INVOICE : billed_by
+  SUPPLIER ||--o{ PURCHASE_INVOICE : billed_by
+  ITEM ||--o{ STOCK_LEDGER_ENTRY : moves
+  WAREHOUSE ||--o{ STOCK_LEDGER_ENTRY : occurs_at
+  SALES_INVOICE ||--o{ GL_ENTRY : generates
+  PURCHASE_INVOICE ||--o{ GL_ENTRY : generates
+  WORK_ORDER ||--o{ STOCK_ENTRY : uses
+  BOM ||--o{ WORK_ORDER : defines
+  EMPLOYEE ||--o{ PAYROLL_ENTRY : paid_to
+  BATCH ||--o{ STOCK_LEDGER_ENTRY : tracks
+
+  ACCOUNT {
+    int id
+    varchar name
+    varchar type
+    int parent_account_id
+    boolean is_group
+  }
+  GL_ENTRY {
+    int id
+    date posting_date
+    int account_id
+    decimal debit
+    decimal credit
+    varchar voucher_type
+    int voucher_id
+  }
+  CUSTOMER {
+    int id
+    varchar name
+    varchar contact
+  }
+  SUPPLIER {
+    int id
+    varchar name
+    varchar contact
+  }
+  ITEM {
+    int id
+    varchar code
+    varchar name
+    varchar uom
+    decimal valuation_rate
+  }
+  WAREHOUSE {
+    int id
+    varchar name
+    varchar location
+  }
+  STOCK_LEDGER_ENTRY {
+    int id
+    int item_id
+    int warehouse_id
+    int batch_id
+    decimal qty
+    decimal valuation_rate
+    date posting_date
+  }
+  SALES_INVOICE {
+    int id
+    int customer_id
+    date posting_date
+    decimal net_total
+    decimal grand_total
+  }
+  PURCHASE_INVOICE {
+    int id
+    int supplier_id
+    date posting_date
+    decimal net_total
+    decimal grand_total
+  }
+  BOM {
+    int id
+    int item_id
+    text components
+  }
+  WORK_ORDER {
+    int id
+    int bom_id
+    decimal qty
+    varchar status
+  }
+  STOCK_ENTRY {
+    int id
+    int work_order_id
+    varchar purpose
+    date posting_date
+  }
+  EMPLOYEE {
+    int id
+    varchar name
+    varchar department
+  }
+  PAYROLL_ENTRY {
+    int id
+    int employee_id
+    date payroll_date
+    decimal net_pay
+  }
+  BATCH {
+    int id
+    varchar batch_no
+    date mfg_date
+  }
