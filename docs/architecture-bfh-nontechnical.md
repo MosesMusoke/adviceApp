@@ -70,3 +70,51 @@ Security overview
 Appendix: How updates are delivered
 ![CI/CD](img/ci-cd.png)
 
+10) Project Timeline (Plain Language)
+Here is a practical schedule. We keep activities overlapping so we can go live faster. Exact dates will be agreed at kickoff.
+
+Phase | What You’ll See | When
+--- | --- | ---
+Plan | We map your processes and lock scope | Weeks 1–2
+Set Up | Test and live systems, secure access, backups, monitoring | Weeks 2–3
+Configure | Finance, Inventory, HR/Payroll, Sales screens and rules | Weeks 3–5
+Load Data (Round 1) | We import your masters and opening balances | Weeks 4–6
+Tailor & Reports | We adjust forms, approvals, and build key reports | Weeks 5–8
+Connect | SMS/WhatsApp, payments/bank (if needed) | Weeks 6–8
+Test (UAT) | Your team tests real scenarios, we fix issues | Weeks 8–10
+Train | Hands-on training and quick guides | Weeks 9–10
+Go Live | Switch to the live system | Week 11
+Stabilize | Close support to ensure smooth operations | Weeks 12–13
+
+11) Costing (Simple Budget)
+These are ballpark figures in USD; we’ll fine-tune after the planning workshops.
+
+One-time setup (once only)
+
+Item | What’s included | Amount
+--- | --- | ---
+Planning | Workshops and delivery plan | $2,000
+Set Up | Staging/Production, backups, monitoring | $1,500
+Configure | Core modules (Finance, Inventory, HR/Payroll, Sales) | $3,000
+Data Load | Masters and openings (trial + final) | $2,500
+Tailoring & Reports | Forms, approvals, 6 reports/prints | $4,000
+Integrations | SMS/WhatsApp, banking/payments (basic) | $1,500
+Training | Two role-based sessions + materials | $1,500
+Go Live & Support | Cutover and 2 weeks hypercare | $1,500
+Contingency | Buffer for unknowns (~10%) | $1,500
+Estimated Total (one-time) |  | $19,000
+
+Monthly (recurring)
+
+Item | What’s included | Amount / month
+--- | --- | ---
+Cloud & Backups | Hosting and encrypted daily backups | $200
+Monitoring | Availability and error alerts | $50
+Support | Business-hours support and small changes | $300
+Estimated Monthly Total |  | $550
+
+Notes
+- Third-party charges (SMS credits, payment gateways, bank APIs) are billed by the providers.
+- Extra reports/print formats beyond the first six will be quoted.
+- On-site visits (if needed) are billed at cost.
+

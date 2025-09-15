@@ -166,3 +166,59 @@ System Monitoring with alerts for downtime, errors, or unusual activity.
 
 Ongoing Support with patches and module extensions as BFH grows.
 
+7. Implementation Timeline
+The following timeline assumes a 12–13 week delivery with overlapping workstreams to shorten elapsed time. Exact dates will be finalized during project kickoff.
+
+Phase | Key Activities | Duration (elapsed) | Primary Owner | Outputs
+--- | --- | --- | --- | ---
+Discovery & Planning | Process walkthroughs, scope finalization, success metrics, project plan | Week 1–2 | ABC + BFH | Signed scope, project plan, RACI
+Environment & Security Setup | Staging & production environments, access control, backups, monitoring | Week 2–3 | ABC | Ready environments, backup & monitoring in place
+Core Configuration | Finance, Inventory, HR/Payroll, Sales baseline setup; master data templates | Week 3–5 | ABC | Configured modules, data templates
+Data Migration (Cycle 1) | Import CoA, Items, Customers, Suppliers, Opening Balances | Week 4–6 | ABC + BFH | Loaded masters & openings
+Customizations & Reports | Forms, workflows, print formats, KPIs, role dashboards | Week 5–8 | ABC | Approved custom features & reports
+Integrations | SMS/WhatsApp, payments/bank feeds, sensors (if in scope) | Week 6–8 | ABC | Working integrations
+UAT (User Acceptance Testing) | Business scenario testing in Staging, defect fixes | Week 8–10 | BFH + ABC | UAT sign‑off
+Training | Role-based training, quick reference guides | Week 9–10 | ABC | Trained users, training materials
+Go‑Live | Production cutover, opening balances, final checks | Week 11 | ABC | Live system
+Hypercare | On‑demand support, defect resolution, daily checks | Week 12–13 | ABC | Stabilized operations
+
+8. Costing (Budgetary Estimate)
+All figures are indicative in USD and will be refined after Discovery. Currency can be adjusted.
+
+One‑Time Implementation
+
+Item | Description | Amount (USD)
+--- | --- | ---
+Discovery & Planning | Workshops, process mapping, delivery plan | 2,000
+Environment & Security Setup | Staging/Prod setup, backups, monitoring | 1,500
+Core Configuration | Finance, Inventory, HR/Payroll, Sales | 3,000
+Data Migration (up to agreed volumes) | Masters, openings, one trial + one final load | 2,500
+Customizations & Reports | Forms, workflows, 6 reports/prints included | 4,000
+Integrations (basic) | SMS/WhatsApp, banking/payment gateway | 1,500
+Training | 2 role-based sessions + materials | 1,500
+Go‑Live & Hypercare (2 weeks) | Cutover support and stabilization | 1,500
+Contingency (approx. 10%) | Risk reserve | 1,500
+Total One‑Time |  | 19,000
+
+Recurring (Monthly)
+
+Item | Description | Amount (USD/Month)
+--- | --- | ---
+Cloud Hosting & Backups | Compute, storage, encrypted backups | 200
+Monitoring & Alerts | Availability and error alerts | 50
+Support SLA (Business Hours) | Incident handling, minor changes | 300
+Estimated Monthly Total |  | 550
+
+Assumptions & Exclusions
+
+- Data migration includes one trial and one final load; additional cycles billed T&M.
+- Up to 6 reports/print formats included; extras estimated separately.
+- Third‑party fees (SMS credits, payment gateway, bank APIs) are billed by providers.
+- On‑site travel (if requested) billed at cost.
+- Production scale sized for typical BFH usage; significant scale‑up may change hosting.
+
+Commercial Terms (Sample)
+
+- Payment Milestones: 40% on kickoff, 40% at UAT sign‑off, 20% at go‑live.
+- Invoices due net 15 days. Prices exclude taxes.
+
