@@ -1,0 +1,28 @@
+flowchart LR
+  subgraph Users
+    U1[Farm Manager]
+    U2[Accountant]
+    U3[Sales Officer]
+    U4[Warehouse Clerk]
+  end
+
+  U1 -->|HTTPS| FE[Web UI React + Bootstrap]
+  U2 -->|HTTPS| FE
+  U3 -->|HTTPS| FE
+  U4 -->|HTTPS| FE
+
+  FE -->|REST| API[Application Services Python]
+  API --> DB[(MariaDB)]
+  API --> R[Redis Queues and Cache]
+
+  API <-->|REST and Webhooks| EXT[External Systems]
+  EXT --- SMS[SMS and WhatsApp Provider]
+  EXT --- BANK[Banking and Payments]
+  EXT --- IOT[IoT Sensors]
+
+  BAK[(Backup Server)]:::infra
+  DB -->|Daily Encrypted Backups| BAK
+
+  class FE,API app;
+  classDef infra fill:#f3f4f6,stroke:#94a3b8,color:#0f172a;
+  classDef app fill:#e0f2fe,stroke:#0284c7,color:#0c4a6e;

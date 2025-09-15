@@ -1,0 +1,43 @@
+flowchart TB
+  Internet[[Internet]] --> STLB[Staging Reverse Proxy and LB]
+  Internet[[Internet]] --> LB[Production Reverse Proxy and LB]
+
+  subgraph Staging
+    direction TB
+    STApp[Staging App Server]
+    STDB[(Staging MariaDB)]
+    STREDIS[(Staging Redis)]
+    STBak[(Staging Backup)]
+    STLB --> STApp
+    STApp --> STDB
+    STApp --> STREDIS
+    STDB -->|Encrypted Backups| STBak
+  end
+
+  subgraph Production
+    direction TB
+    subgraph AppTier
+      direction LR
+      APP1[App Server 1]
+      APP2[App Server 2]
+    end
+    DBHA[(MariaDB Primary)]
+    DBStandby[(MariaDB Standby)]
+    RedisClus[(Redis)]
+    Bak[(Backup)]
+    LB --> APP1
+    LB --> APP2
+    APP1 --> DBHA
+    APP2 --> DBHA
+    DBHA -->|Async Replication| DBStandby
+    APP1 --> RedisClus
+    APP2 --> RedisClus
+    DBHA -->|Daily Backups| Bak
+  end
+
+  Monitoring[Monitoring & Alerts]:::infra
+  APP1 -.metrics.-> Monitoring
+  APP2 -.metrics.-> Monitoring
+  DBHA -.metrics.-> Monitoring
+
+  classDef infra fill:#f1f5f9,stroke:#64748b,color:#0f172a;

@@ -1,0 +1,31 @@
+flowchart LR
+  Customer[Customer] --> CRM[CRM Leads and Quotations]
+  CRM --> SO[Sales Order]
+  SO --> DN[Delivery Note]
+  DN --> SI[Sales Invoice]
+  SI --> GL1[GL Entries]
+  DN --> SLE1[Stock Ledger Entry]
+
+  Supplier[Supplier] --> PR[Purchase Request]
+  PR --> PO[Purchase Order]
+  PO --> PI[Purchase Invoice]
+  PI --> GL2[GL Entries]
+  PI --> SLE2[Stock Ledger Entry]
+
+  Manufacturing[Manufacturing] --> WO[Work Order]
+  WO --> SE3[Stock Entries Consume and Produce]
+  SE3 --> SLE3[Stock Ledger Entry]
+
+  Attendance[Attendance] --> Payroll[Payroll Run]
+  HR[HR] --> Payroll
+  Payroll --> GL3[GL Entries]
+
+  Payments[Bank Payments] --> GL4[GL Entries]
+
+  subgraph Reports
+    BS[Balance Sheet]
+    PnL[Profit & Loss]
+    TB[Trial Balance]
+  end
+
+  GL1 & GL2 & GL3 & GL4 --> Reports
