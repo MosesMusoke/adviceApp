@@ -1,0 +1,81 @@
+{
+  "title": "Zoho Creator App Prep – Presenter Slides",
+  "slides": [
+    {
+      "title": "Title",
+      "bullets": ["Zoho Creator App Preparation", "Presenter's Checklist"],
+      "notes": "Welcome viewers and introduce the topic. Goal: Know what to plan before creating an app in Zoho Creator."
+    },
+    {
+      "title": "Agenda",
+      "bullets": ["Purpose", "Entities (Forms)", "Relationships", "Reports", "Roles & Permissions", "Workflows", "App Structure", "Naming", "Testing", "How it all connects"],
+      "notes": "Briefly explain what will be covered so viewers know the flow."
+    },
+    {
+      "title": "Define the Purpose",
+      "bullets": ["Problem to solve", "Who will use it", "Outputs: reports/dashboards/notifications"],
+      "notes": "Example: Manage student data and track performance. If you can't summarize your app in one sentence, you're not ready to build."
+    },
+    {
+      "title": "List Key Entities (Forms)",
+      "bullets": ["Brainstorm information to track", "Each entity = one form", "For each form: fields, required vs optional, relationships"],
+      "notes": "Examples: Student, Teacher, Subject, Marks, Attendance."
+    },
+    {
+      "title": "Map Relationships",
+      "bullets": ["Identify one-to-many/many-to-one", "Use Lookup for single links", "Use Subform for repeating data"],
+      "notes": "One Student → Many Marks; One Teacher → Many Subjects. Relationships eliminate duplication."
+    },
+    {
+      "title": "Plan Reports",
+      "bullets": ["Start with the end in mind", "Example: Marks by Subject, Attendance Summary, Top 5 Students", "Choose type: List/Calendar/Chart/Pivot/Kanban"],
+      "notes": "Knowing reports up front shapes form design."
+    },
+    {
+      "title": "Roles & Permissions",
+      "bullets": ["List users: Principal/Teacher/Student/Parent", "Decide actions: View/Add/Edit/Delete", "Configure: Share → Users & Permissions"],
+      "notes": "Example: Teachers can add marks; Students view only their own."
+    },
+    {
+      "title": "Workflows & Automation",
+      "bullets": ["Automate repetitive actions", "Examples: calculate averages, send absence SMS", "Note Deluge script spots"],
+      "notes": "Workflows save time and make your app intelligent."
+    },
+    {
+      "title": "Sketch the App Structure",
+      "bullets": ["Visualize form/report connections", "Layout: Student → Marks → Attendance → Reports/Dashboards/Pages", "Optional: show a whiteboard diagram"],
+      "notes": "Helps visualize before building."
+    },
+    {
+      "title": "Clear Naming",
+      "bullets": ["Use consistent, descriptive names", "Examples: student_name, subject_name, total_marks", "Avoid generic labels"],
+      "notes": "Clear naming saves hours later when writing Deluge scripts."
+    },
+    {
+      "title": "Test with Sample Data",
+      "bullets": ["Add sample records", "Check reports and dashboards", "Validate automations", "Build test version, then clone to prod"],
+      "notes": "Test before launch to catch issues early."
+    },
+    {
+      "title": "How It All Connects",
+      "bullets": ["Forms collect", "Workflows automate", "Reports show", "Pages visualize"],
+      "notes": "Flow: Form → Workflow → Report → Page. Keep first app simple; iterate."
+    },
+    {
+      "title": "Quick Summary",
+      "bullets": [
+        "1 Purpose → Clear goal",
+        "2 Entities → Planned forms",
+        "3 Relationships → Lookups/Subforms",
+        "4 Reports → Desired outputs",
+        "5 Roles → Access levels",
+        "6 Workflows → Automation plan",
+        "7 Sketch → Layout diagram",
+        "8 Naming → Organized structure",
+        "9 Test → Sample data check",
+        "10 Connect → Forms+Reports+Pages+Workflows"
+      ],
+      "notes": "Close by emphasizing planning and tease next episode: building forms and connecting reports/dashboards."
+    }
+  ]
+}
